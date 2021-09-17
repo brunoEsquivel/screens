@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121A23;
+    font-family: 'open sans';
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    overflow:hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.header__nav{
+    display: flex;
+    
+    justify-content: space-around;
+    padding: 10px 0;
+    align-items: center;
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.header__logo{
+    color: #eeeeee;
+    font-weight: 600;
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+}
+
+.nav__item{
+    margin: 0 8px;
+}
+
+.nav__link{
+    padding: 10px;
+    color: #eeeeee;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.nav__link:hover{
+    background-color: #3C005F;
+}
+
+.header__toggle,
+.header__close {
+    display: none;
+
+}
+
+@media screen and (max-width: 768px){
+
+    .header__nav{
+        height: 48px;
+        justify-content: space-between;
+        padding: 0 28px;
+
+    }
+
+    .logo a{
+        font-size: 0.9rem;
+    }
+
+    .logo img{
+        width: 30px;
+    }
+
+    .header__toggle{
+        display: inline;
+        color: #eeeeee;
+        font-size: 24px;
+    }
+
+    .header__toggle:hover{
+        color: #BEDDFF;
+    }
+
+    .fondo__menu{
+        background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
+        border-radius: 50%;
+        padding: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__close{
+        position: absolute;
+        right: 24px;
+        display: block;
+        font-size: 24px;
+        border-radius: 50%;
+    }
+
+    .header__close:hover{
+        background-color: #00adb5;
+    }
+
+    .nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
+        color: #eeeeee;
+        width: 60%;
+        height: 100vh;
+        padding: 24px 0;
+        z-index: 1000;
+        transition: 0.8s;
+        border-radius: 0 0 0 50%;
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav__item{
+        margin: 2rem 0;
+    }
+
+    .show{
+        right: 0;
+    }
+
+}
+
+.title{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 35px;
+    text-align: left;
+    margin: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.textos{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    margin: 10px;
+}
+
+
+.wave{
+    margin: 20px 0;
+    display: flex;
+    flex: 2;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: left;
+    justify-content: top;
+    flex-basis: 100%;
+    height: 80vh;
+    background: #8E2DE2; 
+    background: -webkit-linear-gradient(to bottom, #4A00E0, #8E2DE2);
+    background: linear-gradient(to bottom, #4A00E0, #8E2DE2); 
+}
+
+.text-wave{
+    flex-basis: 100%;
+}
+
+
+
+.skills-area {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20%;
+  }
+  
+  .skill {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .skill-title {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .skill-bar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    height: 15px;
+    z-index: -1;
+    border-radius: 100px;
+    position: absolute;
+  }
+  
+  .skill-fill {
+    background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
+    height: 15px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    overflow: hidden;
+  }
+  
+  .skill-percent {
+    font-size: 13px;
+  }
+  
+  .dia_1 {
+    animation: dia_1 2s;
+    width: 50%;
+  }
+  
+  .dia_2 {
+    animation: dia_2 2s;
+    width: 80%;
+  }
+  
+  .dia_3 {
+    animation: dia_3 2s;
+    width: 45%;
+  }
+
+  .dia_4 {
+    animation: dia_4 2s;
+    width: 90%;
+  }
+
+  .dia_5 {
+    animation: dia_5 2s;
+    width: 30%;
+  }
+
+  .dia_6 {
+    animation: dia_6 2s;
+    width: 40%;
+  }
+  
+  @keyframes dia_1 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  
+  @keyframes dia_2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  
+  @keyframes dia_3 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 45%;
+    }
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .skills-area {
+      padding: 0 5%;
+    }
+  }

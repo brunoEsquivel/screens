@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style-bar-chart.css">
+</head>
+<body>
+    <div class="container_main">
+
+        <header class="header__nav">
+            <div class="logo">
+                <!-- <img src="logo">
+                <a href="" class="header__logo">Project</a> -->
+                
+            </div>
+            <nav class="nav" id="nav-menu">
+                <ion-icon name="close-outline" class="header__close" id="close-menu"></ion-icon>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Seguimiento</a></li>
+                    <li class="nav__item"><a href="grafico.html" class="nav__link">Progreso</a></li>
+                    <li class="nav__item"><a href="sign-up.html" class="nav__link">Usuario</a></li>
+                </ul>
+            </nav>
+
+            <div class="fondo__menu"><ion-icon name="menu-outline" class="header__toggle" id="toggle-menu"></ion-icon></div>
+
+        </header>
+        
+        <header>
+
+            <h1 class="title">Rendimiento Semanal</h1>
+            <div class="skills-area">
+                <div class="skill">
+                    <div class="skill-title">Dia 1</div>
+                        <div class="skill-bar"></div>
+                        <div class="dia_1 skill-fill">
+                            <span class="skill-percent">50%</span>
+                        </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">Dia 2</div>
+                    <div class="skill-bar"></div>
+                    <div class="dia_2 skill-fill">
+                        <span class="skill-percent">80%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">Dia 3</div>
+                    <div class="skill-bar"></div>
+                    <div class="dia_3 skill-fill">
+                        <span class="skill-percent">45%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">Dia 4</div>
+                    <div class="skill-bar"></div>
+                    <div class="dia_4 skill-fill">
+                        <span class="skill-percent">90%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">Dia 5</div>
+                    <div class="skill-bar"></div>
+                    <div class="dia_5 skill-fill">
+                        <span class="skill-percent">30%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">Dia 6</div>
+                    <div class="skill-bar"></div>
+                    <div class="dia_6 skill-fill">
+                        <span class="skill-percent">40%</span>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="wave">
+                <div class="text-wave">
+                    <h3>Este es el Resumen de tu Entrenamiento Semanal, Bien Hecho!</h3>
+                    <br>
+                    <p>Aqui podras ver tu <b>progreso de dias entrenados</b>, el maximo de tiempo de entreno es de <b>3 horas</b> el grafico ira progresando segun la cantidad de tiempo que ingreses.</p>
+                </div>
+            </div>
+        </header>
+    </div>  
+    <script src="JavaScript/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
