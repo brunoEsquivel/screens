@@ -12,28 +12,47 @@
 </head>
 <body>
     <div class="container_main">
+        <div class="conteiner_background">
+            <header class="header__nav">
+                <div class="logo">
+                    <!-- <img src="logo">
+                    <a href="" class="header__logo">Project</a> -->
+                    
+                </div>
+                <nav class="nav" id="nav-menu">
+                    <ion-icon name="close-outline" class="header__close" id="close-menu"></ion-icon>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Seguimiento</a></li>
+                        <li class="nav__item"><a href="rendimiento.html" class="nav__link">Progreso</a></li>
+                        <li class="nav__item"><a href="sign-up.html" class="nav__link">Usuario</a></li>
+                    </ul>
+                </nav>
 
-        <header class="header__nav">
-            <div class="logo">
-                <!-- <img src="logo">
-                <a href="" class="header__logo">Project</a> -->
-                
+                <div class="fondo__menu"><ion-icon name="menu-outline" class="header__toggle" id="toggle-menu"></ion-icon></div>
+
+            </header>
+            
+            <div class="conteiner_rendimiento">
+                <h2 class="ingresar_title">Ingresar Tiempo de Entrenamiento</h2>
+                <div class="ingresar_rendimiento model_btn">
+                    <ion-icon name="add-outline"></ion-icon>
+                </div>
             </div>
-            <nav class="nav" id="nav-menu">
-                <ion-icon name="close-outline" class="header__close" id="close-menu"></ion-icon>
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Seguimiento</a></li>
-                    <li class="nav__item"><a href="grafico.html" class="nav__link">Progreso</a></li>
-                    <li class="nav__item"><a href="sign-up.html" class="nav__link">Usuario</a></li>
-                </ul>
-            </nav>
 
-            <div class="fondo__menu"><ion-icon name="menu-outline" class="header__toggle" id="toggle-menu"></ion-icon></div>
+        </div>
+        <div class="model_bg">
+            <div class="modal">
+                <h3>Ingresa tu progreso!</h3>
+                <label>Name:</label>
+                <input type="text">
+                <label>Tiempo:</label>
+                <input type="number">
+                <button class="btn">Registrar Progreso</button>
+                <div class="close-modal-conteiner"><ion-icon name="close-outline" class="close-modal"></ion-icon></div>
+            </div>
 
-        </header>
-        
-        <header>
-
+        </div>
+        <div>
             <h1 class="title">Rendimiento Semanal</h1>
             <div class="skills-area">
                 <div class="skill">
@@ -88,9 +107,11 @@
                     <p>Aqui podras ver tu <b>progreso de dias entrenados</b>, el maximo de tiempo de entreno es de <b>3 horas</b> el grafico ira progresando segun la cantidad de tiempo que ingreses.</p>
                 </div>
             </div>
-        </header>
+        </div>
     </div>  
+    
     <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/button-function.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

@@ -10,7 +10,6 @@ body {
     background-color: #121A23;
     font-family: 'open sans';
     color: #ffffff;
-    overflow: hidden;
 }
 
 .contenedor{
@@ -158,7 +157,7 @@ ul{
 .title{
     color: #ffffff;
     font-weight: 500;
-    font-size: 35px;
+    font-size: 25px;
     text-align: left;
     margin: 10px;
     font-family: 'Open Sans', sans-serif;
@@ -174,16 +173,17 @@ ul{
 
 
 .wave{
-    margin: 20px 0;
+    margin-top: 20px;
     display: flex;
     flex: 2;
     padding: 10px;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     overflow: hidden;
     align-items: left;
     justify-content: top;
     flex-basis: 100%;
-    height: 80vh;
+    height: 40vh;
     background: #8E2DE2; 
     background: -webkit-linear-gradient(to bottom, #4A00E0, #8E2DE2);
     background: linear-gradient(to bottom, #4A00E0, #8E2DE2); 
@@ -193,7 +193,107 @@ ul{
     flex-basis: 100%;
 }
 
+.conteiner_rendimiento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.ingresar_rendimiento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
+  border-radius: 50%;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  color: #eeeeee;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ingresar_title {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.conteiner_background {
+  background-image: linear-gradient(rgba(35, 11, 61, 0.705), rgba(35, 11, 61, 0.705)),url(../multimedia/exercise.jpg);
+  background-position: center;
+	background-size: cover;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 35vh;
+}
+
+
+.model_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.bg_active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close-modal-conteiner {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+  background-color: #1C2833 ;
+  border-radius: 10px;
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.8;
+}
+
+.btn {
+  width: 150px;
+  background: linear-gradient(to bottom, #4A00E0, #8E2DE2); 
+  box-shadow: 0 3px 3px -5px #4A00E0, 0 2px 5px #4A00E0;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+}
 
 .skills-area {
     display: flex;
@@ -203,7 +303,7 @@ ul{
   
   .skill {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   
   .skill-title {
@@ -289,6 +389,33 @@ ul{
     }
     to {
       width: 45%;
+    }
+  }
+
+  @keyframes dia_4 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 90%;
+    }
+  }
+
+  @keyframes dia_5 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 30%;
+    }
+  }
+
+  @keyframes dia_6 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 40%;
     }
   }
   
