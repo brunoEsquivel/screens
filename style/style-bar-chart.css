@@ -240,7 +240,7 @@ ul{
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,6 +253,19 @@ ul{
 .bg_active {
   visibility: visible;
   opacity: 1;
+}
+
+.inputs {
+  width: 100%;
+  background-color: #EAECEE;
+  margin: 10px 0;
+  height: 35px;
+  width: 50%;
+  border-radius: 55px;
+  outline: none;
+  padding: 10px;
+  border: none;
+  line-height: 1;
 }
 
 .close-modal-conteiner {
