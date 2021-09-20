@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
 </head>
 <body>
     <div class="container_main">
@@ -24,10 +25,10 @@
             <nav class="nav" id="nav-menu">
                 <ion-icon name="close-outline" class="header__close" id="close-menu"></ion-icon>
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Seguimiento</a></li>
-                    <li class="nav__item"><a href="rendimiento.html" class="nav__link">Rendimiento</a></li>
+                    <li class="nav__item"><a href="{% url 'index' %}" class="nav__link">Seguimiento</a></li>
+                    <li class="nav__item"><a href="{% url 'performan' %}" class="nav__link">Rendimiento</a></li>
                     <li class="nav__item"><a href="sign-up.html" class="nav__link">Usuario</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Log Out</a></li>
+                    <li class="nav__item"><a href="{% url 'log-out' %}" class="nav__link">Log Out</a></li>
                 </ul>
             </nav>
 
@@ -60,7 +61,7 @@
             </div>
         </header>
     </div>  
-    <script src="JavaScript/main.js"></script>
+    <script src="{% static 'JavaScript/main.js' %}"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
