@@ -174,11 +174,11 @@ ul{
     font-family: 'open sans';
     color: #ffffff;
     display: flex;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
   }
 
   .forms-container {
@@ -197,9 +197,6 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
   }
 
   .input-field {
@@ -209,8 +206,6 @@ ul{
     margin: 10px 0;
     height: 55px;
     border-radius: 55px;
-    display: grid;
-    grid-template-columns: 15% 85%;
   }
   
   .input-field i {
@@ -227,6 +222,9 @@ ul{
   }
 
   .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     background: linear-gradient(to bottom, #4A00E0, #8E2DE2); 
     box-shadow: 0 3px 3px -5px #4A00E0, 0 2px 5px #4A00E0;
@@ -239,4 +237,10 @@ ul{
     font-weight: 600;
     margin: 10px 0;
     cursor: pointer;
+  }
+
+  .btn a{
+    color: #fff;
+    font-weight: 600;
+    font-size: 13.5px;
   }
