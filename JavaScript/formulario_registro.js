@@ -1,35 +1,28 @@
-//Aparicion del Modal
-
-const modalBtn = document.querySelector('.model_btn');
-const modalBg = document.querySelector('.model_bg');
-const closeModal = document.querySelector('.close-modal');
-
-modalBtn.addEventListener('click', () => {
-    modalBg.classList.add('bg_active');
-});
-
-closeModal.addEventListener('click', () => {
-    modalBg.classList.remove('bg_active');
-});
-
-
-//Validacion del input tiempo
-
 const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll('#formulario input');
+const inputs = document.querySelectorAll('#formulario input')
 
 const expresiones = {
-    tiempo: /^[1-5]{1,1}$/
+	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	password: /^.{4,14}$/, // 4 a 14 digitos.
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
 
 const campos = {
-    tiempo: false
+    usuario: false,
+    email: false,
+    password: false,
 }
 
 const validarFormulario = (e) => {
     switch(e.target.name){
-        case "tiempo" :
-            validarCampo(expresiones.tiempo, e.target, 'tiempo');
+        case "usuario" :
+            validarCampo(expresiones.usuario, e.target, 'usuario');
+        break;
+        case "email" :
+            validarCampo(expresiones.email, e.target, 'email');
+        break;
+        case "password" :
+            validarCampo(expresiones.password, e.target, 'password');
         break;
     }
 }
@@ -55,15 +48,15 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', (e) => {
-    if(campos.tiempo) {
+formulario.addEventListener('submit', (/*e*/) => {
+    // e.preventDefault();
+    if(campos.usuario && campos.email && campos.password) {
         formulario.reset();
 
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto')
         });
     } else {
-        e.preventDefault();
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }
 });

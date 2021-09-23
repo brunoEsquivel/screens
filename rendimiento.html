@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'style/style_bar_chart.css' %}">
+    <link rel="stylesheet" href="style/style-bar-chart.css">
 </head>
 <body>
     <div class="container_main">
@@ -23,10 +23,10 @@
                 <nav class="nav" id="nav-menu">
                     <ion-icon name="close-outline" class="header__close" id="close-menu"></ion-icon>
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="{% url 'index' %}" class="nav__link">Seguimiento</a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link">Seguimiento</a></li>
                         <li class="nav__item"><a href="rendimiento.html" class="nav__link">Rendimiento</a></li>
                         <li class="nav__item"><a href="sign-up.html" class="nav__link">Usuario</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Log Out</a></li>
+                        <li class="nav__item"><a href="sign-in.html" class="nav__link">Log Out</a></li>
                     </ul>
                 </nav>
 
@@ -46,14 +46,27 @@
             <div class="modal">
                 <h3 class="ingresar_title">Ingresa tu progreso!</h3>
                 <label>Tiempo:</label>
-                <input type="number" class="inputs">
-                <button class="btn">Registrar Progreso</button>
-                <div class="close-modal-conteiner"><ion-icon name="close-outline" class="close-modal"></ion-icon></div>
+                <form action="" method="POST" id="formulario">
+                    <div class="input-field">
+                        <div class="formulario__grupo-input" id="grupo__tiempo">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            <i class="fas fa-clock"></i>
+                            <input type="number" name='tiempo' placeholder="Ingrese su tiempo" />
+                        </div>
+                        <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 digitos.</p>
+                    </div>
+
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                        <p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> Solo se admite de 1 a 6 horas.</p>
+                    </div>
+                    <div class="close-modal-conteiner"><ion-icon name="close-outline" class="close-modal"></ion-icon></div>
+                    <input type="submit" class="btn" value="Ingresar" />
+                </form>
             </div>
 
         </div>
         <div>
-            <h1 class="title">Rendimiento Semanal</h1>
+            <h1 class="title">Rendimiento Semanal:</h1>
             <div class="skills-area">
                 <div class="skill">
                     <div class="skill-title">Dia 1</div>
@@ -104,17 +117,17 @@
                 <div class="text-wave">
                     <h3>Este es el Resumen de tu Entrenamiento Semanal, Bien Hecho!</h3>
                     <br>
-                    <p>Aqui podras ver tu <b>progreso de dias entrenados</b>, el maximo de tiempo de entreno es de <b>3 horas</b> el grafico ira progresando segun la cantidad de tiempo que ingreses.</p>
+                    <p>Aqui podras ver tu <b>progreso de dias entrenados</b>, el maximo de tiempo de entreno es de <b>5 horas</b> el grafico ira progresando segun la cantidad de tiempo que ingreses.</p>
                 </div>
             </div>
         </div>
     </div>  
     
-    <script src="{% static 'JavaScript/main.js' %}"></script>
-    <script src="{% static 'JavaScript/button-function.js' %}"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/button-function.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 </body>
 </html>

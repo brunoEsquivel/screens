@@ -21,153 +21,9 @@
     font-family: 'Open Sans', sans-serif;
   }
 
-
-  .contenedor{
-    padding: 60px 0;
-    width: 90%;
-    max-width: 1000px;
-    overflow:hidden;
-}
-
 a{
     text-decoration: none;
 }
-
-ul{
-    list-style: none;
-}
-
-.header__nav{
-    display: flex;
-    
-    justify-content: space-around;
-    padding: 10px 0;
-    align-items: center;
-}
-
-
-
-.logo{
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 50px;
-    border-radius: 50px;
-    margin-right: 10px;
-}
-
-.header__logo{
-    color: #eeeeee;
-    font-weight: 600;
-}
-
-.nav__list{
-    display: flex;
-    align-items: center;
-}
-
-.nav__item{
-    margin: 0 8px;
-}
-
-.nav__link{
-    padding: 10px;
-    color: #eeeeee;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border-radius: 5px;
-}
-
-.nav__link:hover{
-    background-color: #3C005F;
-}
-
-.header__toggle,
-.header__close {
-    display: none;
-
-}
-
-@media screen and (max-width: 768px){
-
-    .header__nav{
-        height: 48px;
-        justify-content: space-between;
-        padding: 0 28px;
-
-    }
-
-    .logo a{
-        font-size: 0.9rem;
-    }
-
-    .logo img{
-        width: 30px;
-    }
-
-    .header__toggle{
-        display: inline;
-        color: #eeeeee;
-        font-size: 24px;
-    }
-
-    .header__toggle:hover{
-        color: #BEDDFF;
-    }
-
-    .fondo__menu{
-        background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
-        border-radius: 50%;
-        padding: 5px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .header__close{
-        position: absolute;
-        right: 24px;
-        display: block;
-        font-size: 24px;
-        border-radius: 50%;
-    }
-
-    .header__close:hover{
-        background-color: #00adb5;
-    }
-
-    .nav{
-        position: fixed;
-        top: 0;
-        right: -100%;
-        background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
-        color: #eeeeee;
-        width: 60%;
-        height: 100vh;
-        padding: 24px 0;
-        z-index: 1000;
-        transition: 0.8s;
-        border-radius: 0 0 0 50%;
-    }
-    .nav__list{
-        display: flex;
-        flex-direction: column;
-    }
-    .nav__item{
-        margin: 2rem 0;
-    }
-
-    .show{
-        right: 0;
-    }
-
-}
-
-
-
-
-
 
   .container {
     background-color: #121A23;
@@ -186,40 +42,37 @@ ul{
     height: 100%;
   }
 
-  .sign-up {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-  }
-
   form {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   .input-field {
-    max-width: 380px;
-    width: 100%;
+    display: flex;
+    width: 300px;
     background-color: #EAECEE;
     margin: 10px 0;
     height: 55px;
     border-radius: 55px;
+    width: 100%;
   }
-  
-  .input-field i {
-    text-align: center;
-    line-height: 55px;
-    color: #757575;
-  }
-  
-  .input-field input {
+
+  .formulario__grupo-input input {
     background: none;
     outline: none;
     border: none;
     line-height: 1;
+}
+  
+  .formulario__grupo-input i {
+    text-align: center;
+    line-height: 55px;
+    color: #757575;
+    margin: 0 15px;
   }
+  
 
   .btn {
     display: flex;
@@ -244,3 +97,74 @@ ul{
     font-weight: 600;
     font-size: 13.5px;
   }
+
+
+
+/*Estilo Validacion*/
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input-error {
+    font-size: 13px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    z-index: 180;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__mensaje{
+    height: 45px;
+    line-height: 45px;
+    background-color: #f66060;
+    padding: 0 15px;
+    border-radius: 20px;
+    display: none;
+}
+
+.formulario__mensaje b{
+    margin-left: 8px;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__grupo-input {
+    width: 100%;
+}
+
+.formulario__grupo-input input {
+    width: 80%;
+}
+
+@media screen and (max-width: 290px){
+    .formulario__grupo-input input {
+        width: 60%;
+    }
+}
+
+
+/*Señales de Validacion*/
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
