@@ -46,8 +46,6 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (/*e*/) => {
     // e.preventDefault();
     if(campos.email && campos.password) {
-        formulario.reset();
-
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto')
         });

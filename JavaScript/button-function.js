@@ -55,15 +55,12 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', (e) => {
+formulario.addEventListener('submit', () => {
     if(campos.tiempo) {
-        formulario.reset();
-
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto')
         });
     } else {
-        e.preventDefault();
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }
 });
