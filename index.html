@@ -41,10 +41,28 @@
             </section>
 
             <div class="conteiner_btn">
-                <div class="ingresar_fecha">
+                <div class="model_btn">
                     <ion-icon name="add-outline"></ion-icon>
                 </div>
-                <h1>Ingresa tu fecha de inicio</h1>
+                <h1>Presione el boton</h1>
+            </div>
+        </div>
+
+        <div class="model_bg">
+            <div class="modal">
+                <!-- <div class="wrapper">
+                    <label for="datepicker">Seleccione una fecha</label><br>
+                    <input type="date" id="datepicker">	
+                    <div class="btn">Ingrese</div>
+                </div> -->
+                <div class="wrapper">
+                    <h3 class="ingresar_title">Ingrese una Fecha</h3>
+                    <label for="datepicker">Selecciona una Fecha:
+                        <input type="text" id="datepicker" autocomplete="off">
+                    </label>	
+                    <div class="btn">Ingrese</div>
+                </div>
+                <div class="close-modal-conteiner"><ion-icon name="close-outline" class="close-modal"></ion-icon></div>
             </div>
         </div>
 
@@ -68,6 +86,11 @@
         
     </div>  
     <script src="JavaScript/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="JavaScript/date-picker.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
