@@ -95,7 +95,7 @@ h1 {
 .buttonsContainerLogin {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 117px);
+  transform: translate(-50%, 118px);
   width: 80%;
 }
 
@@ -125,6 +125,7 @@ h1 {
     rgba(98, 106, 210, 1) 100%
   );
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+  border: none;
 }
 
 .loginBtnContainer {
@@ -371,18 +372,28 @@ ul {
   margin-bottom: 10px;
 }
 
+.blue {
+  background: linear-gradient(
+    146deg,
+    rgba(148, 158, 233, 1) 0%,
+    rgba(98, 106, 210, 1) 100%
+  );
+}
+
+.red {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 140, 160, 1) 0%,
+    rgba(255, 121, 142, 1) 100%
+  );
+}
+
 .card_container {
   display: flex;
   width: 90%;
   border-radius: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 140, 160, 1) 0%,
-    rgba(255, 121, 142, 1) 100%
-  );
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
 }
 
 .card_container h1 {
@@ -428,12 +439,20 @@ ul {
   z-index: 200;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.5s;
+  /* transition: visibility 0s, opacity 0.5s; */
 }
 
 .bg_active {
   visibility: visible;
   opacity: 1;
+}
+
+.close-modal {
+  position: absolute;
+  color: white;
+  top: 0;
+  right: 0;
+  font-size: 25px;
 }
 
 .close-modal-conteiner {
@@ -446,14 +465,15 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .modal {
   position: relative;
-  background-color: #1c2833;
+  backdrop-filter: blur(10px);
   border-radius: 10px;
-  width: 90%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -467,11 +487,15 @@ ul {
   justify-content: center;
   align-items: center;
   width: 150px;
-  background: rgb(82, 56, 177);
+  background: linear-gradient(
+    146deg,
+    rgba(148, 158, 233, 1) 0%,
+    rgba(98, 106, 210, 1) 100%
+  );
   border: none;
   outline: none;
   height: 49px;
-  border-radius: 49px;
+  border-radius: 10px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
@@ -496,20 +520,20 @@ ul {
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  padding: 0 0.5rem;
+  width: 50%;
+  height: 40%;
 }
 .wrapper label {
   font-size: 0.75rem;
   font-weight: 400;
   display: block;
-  margin: 20px;
   color: #b0bec5;
-  border: 1px solid #eceff1;
+
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
 }
@@ -617,7 +641,7 @@ table {
 .conteiner__title__progreso {
   display: flex;
   /* align-items: center;
-  justify-content: center; */
+    justify-content: center; */
 }
 .conteiner__bar {
   display: flex;
@@ -688,7 +712,7 @@ table {
 .textContainer .leftItems {
   color: #ff7990;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex: 1;
   justify-content: space-between;
   width: 100%;
@@ -697,6 +721,7 @@ table {
   display: flex;
   flex-direction: row;
   flex: 1;
+  padding-bottom: 10px;
 }
 
 .textContainer .leftItems .percentage {
@@ -712,18 +737,6 @@ table {
 
 .textContainer .rightItems {
   text-align: center;
-}
-
-span {
-  margin-right: 10px;
-  color: #3f2983;
-}
-
-.progress {
-  background-color: #fbecf0;
-  border-radius: 20px;
-  height: 10px;
-  width: 100%;
 }
 
 .itemLoginContainer {
@@ -743,6 +756,18 @@ span {
   border-radius: 10px;
   border-bottom: 1px solid rgb(228, 237, 254);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+}
+
+span {
+  margin-right: 10px;
+  color: #3f2983;
+}
+
+.progress {
+  background-color: #fbecf0;
+  border-radius: 20px;
+  height: 10px;
+  width: 100%;
 }
 
 #progress-done {
@@ -774,4 +799,57 @@ span {
 
 .text-wave {
   flex-basis: 100%;
+}
+
+.ingresar_title {
+  color: white;
+}
+
+#datepicker {
+  font-family: "Neometric Extra Light";
+  font-weight: bold;
+}
+
+span {
+  font-family: "Neometric Extra Light";
+  font-weight: bold;
+}
+.ui-state-default {
+  font-family: "Neometric Extra Light";
+  font-weight: bold;
+  color: rgba(177, 177, 177, 0.267);
+}
+
+#datepicker.hasDatepicker {
+  border: 1px solid rgb(249, 246, 252);
+  color: white;
+  padding: 10px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.formulario__input-error {
+  font-size: 13px;
+  display: none;
+}
+
+.formulario__input-error-activo {
+  display: block;
+}
+
+.formulario__validacion-estado {
+  font-size: 16px;
+  opacity: 0;
+}
+
+/* Señales de Validacion */
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
 }
