@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+@font-face {
+  font-family: "Neometric Extra Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Neometric Extra Bold"),
+    url("../fonts/Neometric\ Alt\ Extra\ Bold\ \(Bold\).woff") format("woff");
+}
+
+@font-face {
+  font-family: "Neometric Extra Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Neometric Extra Light"),
+    url("../fonts/Neometric\ Alt\ Extra\ Light\ \(Regular\).woff")
+      format("woff");
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -294,6 +311,11 @@ ul{
   cursor: pointer;
 }
 
+.background-rendimiento {
+  background-color: #fff;
+  z-index: -200;
+}
+
 .skills-area {
     display: flex;
     flex-direction: column;
@@ -303,35 +325,37 @@ ul{
   .skill {
     position: relative;
     margin-bottom: 10px;
+    font-family: "Neometric Extra Bold";
+    font-weight: 900;
   }
   
   .skill-title {
     font-size: 15px;
     margin-bottom: 5px;
+    color: #000;
   }
   
   .skill-bar {
     width: 100%;
-    background: rgba(255, 255, 255, 0.6);
-    height: 15px;
+    background-color: #000;
+    height: 10px;
     z-index: -1;
     border-radius: 100px;
     position: absolute;
   }
   
   .skill-fill {
-    background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
-    height: 15px;
-    border-radius: 100px;
+    background: #fe7991;
+    height: 10px;
+    border-radius: 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 30px;
-    overflow: hidden;
+    padding-right: 20px;
   }
   
   .skill-percent {
-    font-size: 13px;
+    font-size: 11px;
   }
   
   .dia_1 {
