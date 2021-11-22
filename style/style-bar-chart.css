@@ -311,9 +311,9 @@ ul{
   cursor: pointer;
 }
 
+/* BARRITAS */
 .background-rendimiento {
   background-color: #fff;
-  z-index: -200;
 }
 
 .skills-area {
@@ -323,7 +323,6 @@ ul{
   }
   
   .skill {
-    position: relative;
     margin-bottom: 10px;
     font-family: "Neometric Extra Bold";
     font-weight: 900;
@@ -332,16 +331,15 @@ ul{
   .skill-title {
     font-size: 15px;
     margin-bottom: 5px;
-    color: #000;
+    color: #3F2983;
   }
   
   .skill-bar {
     width: 100%;
-    background-color: #000;
+    background-color: #fbecf0;
     height: 10px;
-    z-index: -1;
     border-radius: 100px;
-    position: absolute;
+    position: relative;
   }
   
   .skill-fill {
@@ -352,9 +350,11 @@ ul{
     justify-content: flex-end;
     align-items: center;
     padding-right: 20px;
+    position: absolute;
   }
   
   .skill-percent {
+    font-family: "Neometric Extra Light";;
     font-size: 11px;
   }
   
@@ -365,27 +365,27 @@ ul{
   
   .dia_2 {
     animation: dia_2 2s;
-    width: 80%;
+    width: 90%;
   }
   
   .dia_3 {
     animation: dia_3 2s;
-    width: 45%;
+    width: 20%;
   }
 
   .dia_4 {
     animation: dia_4 2s;
-    width: 90%;
+    width: 60%;
   }
 
   .dia_5 {
     animation: dia_5 2s;
-    width: 30%;
+    width: 40%;
   }
 
   .dia_6 {
     animation: dia_6 2s;
-    width: 40%;
+    width: 70%;
   }
   
   @keyframes dia_1 {
@@ -402,7 +402,7 @@ ul{
       width: 0;
     }
     to {
-      width: 80%;
+      width: 90%;
     }
   }
   
@@ -411,7 +411,7 @@ ul{
       width: 0;
     }
     to {
-      width: 45%;
+      width: 20%;
     }
   }
 
@@ -420,7 +420,7 @@ ul{
       width: 0;
     }
     to {
-      width: 90%;
+      width: 60%;
     }
   }
 
@@ -429,7 +429,7 @@ ul{
       width: 0;
     }
     to {
-      width: 30%;
+      width: 40%;
     }
   }
 
@@ -438,7 +438,7 @@ ul{
       width: 0;
     }
     to {
-      width: 40%;
+      width: 70%;
     }
   }
   
@@ -447,6 +447,8 @@ ul{
       padding: 0 5%;
     }
   }
+
+  /*------------------------------------------------*/
 
 
   .forms-container {
