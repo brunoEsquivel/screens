@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap'); */
+@font-face {
+    font-family: 'Neometric Extra Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neometric Extra Bold'), url('../fonts/Neometric\ Alt\ Extra\ Bold\ \(Bold\).woff') format('woff');
+    }
 *{
     margin: 0;
     padding: 0;
@@ -8,35 +12,51 @@
     box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+    font-family: 'Neometric Extra Bold';
 }
 
 body {
-background-color: #121A23;
-font-family: 'Lato', sans-serif;
-color: #ffffff;
-overflow: hidden;
+background-color: rgb(249,246,252);
+color: #000;
 }
 
-.container_main {
-    height: 100%;
+h1 {
+    color:#fff;
+    font-size: 37;
 }
 
-.main {
+.conteiner_header{
+    background-color: red;
+    position:relative;
+}
+
+.mainHeader{
+    background-color: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
     width: 100%;
-	height: 50vh;
-	background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../multimedia/background-6.jpg);
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-    border-bottom-right-radius: 60px;
+	height: 30vh;
+    background-image: url(../multimedia/background-header.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family: 'Neometric Extra Bold';
+    font-weight: normal;
 }
 
 
-.contenedor{
-    padding: 60px 0;
-    width: 90%;
-    max-width: 1000px;
-    overflow:hidden;
+.card {
+    /* background-color: rgb(69, 47, 151); */
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    bottom:-60px;
+    left:50%;
+    width: max-content;
+    transform: translate(-50%, 0%);
 }
 
 a{
@@ -50,8 +70,7 @@ ul{
 .header__nav{
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
-    align-items: center;
+    flex:1
 }
 
 
@@ -99,13 +118,12 @@ ul{
 
 }
 
+
 @media screen and (max-width: 768px){
-
-    .header__nav{
-        height: 48px;
-        justify-content: space-between;
-        padding: 0 28px;
-
+    .card_text h1 {font-size: 15px;}
+    .card_text h5 {font-size: 10px;}
+    .card_btn_container{
+        font-size: 33px;
     }
 
     .logo a{
@@ -127,11 +145,23 @@ ul{
     }
 
     .fondo__menu{
-        background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
-        border-radius: 50%;
-        padding: 5px;
-        width: 40px;
-        height: 40px;
+        width: 37px;
+        height: 37px;
+        background:rgb(87,68,181);
+        border-radius:15px;
+        padding: 3px;
+        transform: rotate(45deg);
+    }
+
+    .margin-hamburger {
+        /* position: absolute; */
+        right: 0;
+        /* margin-right: 20px; */
+    }
+
+    #text {
+        transform: rotate(-45deg);
+        color: #000;
     }
 
     .header__close{
@@ -150,14 +180,13 @@ ul{
         position: fixed;
         top: 0;
         right: -100%;
-        background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
+        background: rgb(82, 56, 177);
         color: #eeeeee;
         width: 60%;
         height: 100vh;
         padding: 24px 0;
         z-index: 1000;
         transition: 0.8s;
-        border-radius: 0 0 0 50%;
     }
     .nav__list{
         display: flex;
@@ -173,21 +202,6 @@ ul{
 
 }
 
-/* .textos__header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
-
-.title{
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 35px;
-    text-align: left;
-    margin: 10px;
-}
-
 .title__progreso{
     color: #ffffff;
     font-weight: 500;
@@ -196,41 +210,45 @@ ul{
     margin-bottom: 10px;
 }
 
-.textos{
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: left;
-    margin: 10px;
-}
-
-.conteiner_btn {
+.card_container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 50vh;
+    border-radius: 10px;
+    padding-top:15px;
+    padding-bottom:15px;
+    background: linear-gradient(90deg, rgba(255,140,160,1) 0%, rgba(255,121,142,1) 100%);
+}
+
+.card_container h1{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.card_text{
+    flex:2;
+    display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.conteiner_btn h1{
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 22px;
-    text-align: center;
+.card_text h5{
+    color:white;
 }
 
-.model_btn {
+.card_btn_container {
+    flex:1;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
-    border-radius: 50%;
-    padding: 5px;
     width: 50px;
     height: 50px;
     color: #eeeeee;
     font-size: 30px;
     cursor: pointer;
-    margin: 10px;
   }
 
   .model_bg {
@@ -286,8 +304,7 @@ ul{
     justify-content: center;
     align-items: center;
     width: 150px;
-    background: linear-gradient(to bottom, #4A00E0, #8E2DE2); 
-    box-shadow: 0 3px 3px -5px #4A00E0, 0 2px 5px #4A00E0;
+    background: rgb(82, 56, 177); 
     border: none;
     outline: none;
     height: 49px;
@@ -299,6 +316,18 @@ ul{
     cursor: pointer;
   }
 
+  @media screen and (max-width: 400px){
+    .card_text h1 {text-align: left;
+        font-size: 15px;}
+    .card_text h5 {font-size: 10px;}
+    .card_btn_container{
+        font-size: 33px;
+    }
+    .card{
+        bottom:-35px;
+    }
+}
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -307,7 +336,7 @@ ul{
     width: 100%;
 	padding: 0 0.5rem;
 }
-label {
+.wrapper label {
 	font-size: 0.75rem;
 	font-weight: 400;
 	display: block;
@@ -317,13 +346,13 @@ label {
 	padding: 0.5rem 0.75rem;
 	border-radius: 0.5rem;
 }
-input {
+.wrapper input {
 	display:block;
 	border: none;
 	border-radius: 30px;
 	border: 1px solid transparent;
 	line-height: 1.5rem;
-	padding: 0;
+	padding-left: 5%;
 	font-size: 1rem;
 	color: #607D8B;
 	width: 100%;
