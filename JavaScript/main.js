@@ -12,9 +12,8 @@ closeMenu.addEventListener('click', () => {
 })
 
 
+
 //Aparicion Modal
-
-
 const modalBtn = document.querySelector('.model_btn');
 const modalBg = document.querySelector('.model_bg');
 const closeModal = document.querySelector('.close-modal');
